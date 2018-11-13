@@ -51,7 +51,7 @@ class Song
     artist = parsed[0]
     name = parsed[1].chomp('.mp3')
     song = self.create_by_name(name)
-    song.artist = artist
+    song.artist_name = artist
     song
   end
   
