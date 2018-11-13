@@ -42,7 +42,7 @@ class Song
       list << song.name
     end
     list.sort.collect do |name|
-      self.find_by_name(nake)
+      self.find_by_name(name)
     end
   end
   
