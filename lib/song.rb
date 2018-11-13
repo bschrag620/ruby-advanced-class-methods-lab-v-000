@@ -45,6 +45,15 @@ class Song
       self.find_by_name(name)
     end
   end
+
+  def self.new_from_filename(file_name)
+    parsed = file_name.split(' - ')
+    artist = parsed[0]
+    name = parsed[1].chomp('.mp3')
+    song = self.create_by_name(name)
+    song.artist = artist
+    song
+  end
   
   def save
     self.class.all << self
