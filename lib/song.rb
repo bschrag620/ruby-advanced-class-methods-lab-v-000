@@ -28,6 +28,10 @@ class Song
     false
   end
 
+  def self.find_or_create_by_name(name)
+    self.find_by_name(name) || self.create_by_name(name)
+  end
+  
   def save
     self.class.all << self
   end
