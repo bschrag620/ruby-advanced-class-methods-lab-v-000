@@ -25,6 +25,7 @@ class Song
     @@all.each do |song|
       return song if song.name == name
     end
+    false
   end
 
   def save
