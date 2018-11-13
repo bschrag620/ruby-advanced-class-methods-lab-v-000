@@ -36,6 +36,16 @@ class Song
     song
   end
 
+  def self.alphabetical
+    list = []
+    @@all.each do |song|
+      list << song.name
+    end
+    list.sort.collect do |name|
+      self.find_by_name(nake)
+    end
+  end
+  
   def save
     self.class.all << self
   end
