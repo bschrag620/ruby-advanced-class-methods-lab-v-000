@@ -54,7 +54,7 @@ class Song
     song.artist_name = artist
     song
   end
-  
+
   def save
     self.class.all << self
   end
